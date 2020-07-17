@@ -19,6 +19,7 @@
     </properties>
 
     <dependencies>
+        <!--
         <dependency>
             <groupId>com.okta.jwt</groupId>
             <artifactId>okta-jwt-verifier</artifactId>
@@ -31,6 +32,7 @@
             <version>${okta-jwt.version}</version>
             <scope>runtime</scope>
         </dependency>
+        -->
 
         <dependency>
             <groupId>com.linecorp.armeria</groupId>
@@ -91,7 +93,7 @@
                 <version>2.2.0</version>
                 <configuration>
                     <to>
-                        <image>saturnism/todo-backend</image>
+                        <image>saturnism/todo-backend-noauth</image>
                     </to>
                 </configuration>
             </plugin>

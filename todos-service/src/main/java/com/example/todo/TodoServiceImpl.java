@@ -14,14 +14,12 @@ public class TodoServiceImpl extends TodoServiceGrpc.TodoServiceImplBase {
     private static final List<Todo> todos = new LinkedList<Todo>();
 
     @Override
-    @PreAuthorize("hasRole('EVERYONE')")
     public void getAll(AllTodoRequest request, StreamObserver<AllTodoResponse> responseObserver) {
         responseObserver.onNext(AllTodoResponse.newBuilder().addAllTodos(todos).build());
         responseObserver.onCompleted();
     }
 
     @Override
-    @PreAuthorize("hasRole('EDITOR')")
     public void deleteTodo(DeleteTodoRequest request, StreamObserver<DeleteTodoResponse> responseObserver) {
         for (Iterator<Todo> it = todos.iterator(); it.hasNext(); ) {
             Todo todo = it.next();
@@ -33,7 +31,6 @@ public class TodoServiceImpl extends TodoServiceGrpc.TodoServiceImplBase {
     }
 
     @Override
-    @PreAuthorize("hasRole('EDITOR')")
     public void createTodo(CreateTodoRequest request, StreamObserver<CreateTodoResponse> responseObserver) {
         todos.add(Todo.newBuilder()
                 .setId(UUID.randomUUID().toString())
