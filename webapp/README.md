@@ -8,12 +8,16 @@
 
 This will serve traffic to `/com.example.todo.TodoService` using `mocks/todo.js`
 
+Browse to `https://localhost:8000/todos`
+
 ## Run without Mocks
 
 1. Start the `todo-service` backend, in its directory, run `mvn spring-boot:run`
 1. Start the frontend: `npm run start:nomock`
 
 The traffic to `/com.example.todo.TodoService' will be proxied to the backend.
+
+Browse to `https://localhost:8000/todos`
 
 ## Production build
 
