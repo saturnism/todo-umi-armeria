@@ -10,7 +10,7 @@ This will serve traffic to `/com.example.todo.TodoService` using `mocks/todo.js`
 
 ## Run without Mocks
 
-1. Start the `todo-service` backend, in its directory, run `./mvnw spring-boot:run`
+1. Start the `todo-service` backend, in its directory, run `mvn spring-boot:run`
 1. Start the frontend: `npm run start:nomock`
 
 The traffic to `/com.example.todo.TodoService' will be proxied to the backend.
